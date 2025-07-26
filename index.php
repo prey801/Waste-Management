@@ -4,8 +4,8 @@
     <p>Report waste issues, track resolution progress, and view collection schedules in your area.</p>
     <?php if (!isLoggedIn()): ?>
         <div class="cta-buttons">
-            <a href="/register.php" class="btn btn-primary">Register Now</a>
-            <a href="/login.php" class="btn btn-secondary">Login</a>
+            <a href="register.php" class="btn btn-primary">Register Now</a>
+            <a href="login.php" class="btn btn-secondary">Login</a>
         </div>
     <?php endif; ?>
 </section>

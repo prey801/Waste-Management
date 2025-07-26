@@ -376,3 +376,70 @@ table tr:nth-child(even) {
         grid-template-columns: 1fr;
     }
 }
+/* Tasks Section */
+.tasks-section {
+    padding: 2rem;
+}
+
+.status-filter {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+}
+
+.status-filter form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-filter label {
+    font-weight: 500;
+}
+
+.status-filter select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.tasks-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.task-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.task-body p {
+    margin-bottom: 0.5rem;
+}
+
+.task-actions {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.task-actions .form-group {
+    margin-bottom: 1rem;
+}
+
+.task-actions textarea {
+    width: 100%;
+    min-height: 80px;
+}

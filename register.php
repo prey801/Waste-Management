@@ -3,7 +3,7 @@ require_once 'config/db.php';
 require_once 'includes/auth.php';
 
 if (isLoggedIn()) {
-    header('Location: /index.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <?php if ($success): ?>
         <div class="alert alert-success">
-            Registration successful! <a href="/login.php">Login here</a>.
+            Registration successful! <a href="login.php">Login here</a>.
         </div>
     <?php else: ?>
         <?php if (!empty($errors)): ?>
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
         
-        <form method="POST" action="/register.php">
+        <form method="POST" action="register.php">
             <div class="form-group">
                 <label for="full_name">Full Name</label>
                 <input type="text" id="full_name" name="full_name" required>
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
-        <p>Already have an account? <a href="/login.php">Login here</a></p>
+        <p>Already have an account? <a href="login.php">Login here</a></p>
     <?php endif; ?>
 </section>
 <?php require_once 'includes/footer.php'; ?>

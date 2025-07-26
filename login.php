@@ -3,7 +3,7 @@ require_once 'config/db.php';
 require_once 'includes/auth.php';
 
 if (isLoggedIn()) {
-    header('Location: /index.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Redirect based on user type
         if ($user['user_type'] === 'admin') {
-            header('Location: /admin/dashboard.php');
+            header('Location: admin/dashboard.php');
         } elseif ($user['user_type'] === 'waste_team') {
-            header('Location: /admin/tasks.php');
+            header('Location: admin/tasks.php');
         } else {
             header('Location: /index.php');
         }
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($error): ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
     <?php endif; ?>
-    <form method="POST" action="/login.php">
+    <form method="POST" action="login.php">
         <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" required>
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-    <p>Don't have an account? <a href="/register.php">Register here</a></p>
+    <p>Don't have an account? <a href="register.php">Register here</a></p>
     <p><a href="#">Forgot your password?</a></p>
 </section>
 <?php require_once 'includes/footer.php'; ?>
