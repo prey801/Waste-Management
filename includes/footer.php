@@ -1,12 +1,21 @@
-<body>
-    <style>
+<?php
+// includes/footer.php
+?>
+<footer>
+    <div class="container">
+        <p>&copy; <?php echo date('Y'); ?> EcoTrack Waste Management. All rights reserved.</p>
+        <p>Developed by <a href="https://www.linkedin.com/in/june-mutiso/" target="_blank">June Mutiso</a> for Zetech University</p>
+    </div>
+</footer>
+
+<style>
     footer {
-        background-color: #333;
+        background: linear-gradient(to right, var(--primary-dark), var(--primary));
         color: white;
         padding: 20px 0;
-        position: fixed;
-        bottom: 0;
         width: 100%;
+        position: relative;
+        z-index: 2;
     }
 
     footer .container {
@@ -17,20 +26,30 @@
 
     footer p {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 0.9rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     footer p a {
-        color: #2ecc71;
+        color: var(--accent);
         text-decoration: none;
+        transition: var(--transition);
     }
-    </style>
-</main>
-    <footer>
-        <div class="container">
-            <p>&copy; <?php echo date('Y'); ?> Waste Management Feedback System. All rights reserved.</p>
-            <p>Developed by June Mutiso for Zetech University</p>
-        </div>
-    </footer>
-    <script src="/assets/js/main.js"></script>
-</body>
-</html>
+
+    footer p a:hover {
+        color: var(--primary-light);
+        text-decoration: underline;
+    }
+
+    @media (max-width: 576px) {
+        footer {
+            padding: 15px 0;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+<script src="/assets/js/main.js"></script>
