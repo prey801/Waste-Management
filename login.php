@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($user['user_type'] === 'waste_team') {
             header('Location: admin/tasks.php');
         } else {
-            header('Location: /index.php');
+            header('Location: index.php');
         }
         exit();
     } else {
