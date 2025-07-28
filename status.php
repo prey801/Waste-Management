@@ -53,4 +53,3 @@ $feedback_items = $stmt->fetchAll();
         </div>
     <?php endif; ?>
 </section>
-<?php require_once 'includes/footer.php'; ?>
